@@ -1,4 +1,16 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import HeaderView from './pages/HeaderView.vue'
+import App from "./App.vue"
 
-createApp(App).mount('#app')
+const router = createRouter({
+    routes: [{
+      path: '/',
+      component: HeaderView
+    }],
+    history: createWebHistory()
+  })
+
+createApp(App)
+    .use(router)
+    .mount('#app')

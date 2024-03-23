@@ -1,12 +1,23 @@
 <template>
-  <headerView/>
-  <servicesView/>
+  <router-view />
 </template>
 
-<script setup lang="ts">
-import headerView from './views/headerView.vue';
-import servicesView from './views/servicesView.vue';
+<script lang="ts">
 
+  import BaseButton from "./UI/buttons/BaseButton/BaseButton.vue"
+  import ActionButton from "./UI/buttons/ActionButton/ActionButton.vue"
+
+  export default{
+    name: "App",
+    components:{
+      BaseButton: BaseButton,
+      ActionButton: ActionButton
+    },
+    data() {
+      return {
+      }
+    }
+  }
 </script>
 
 <style>
@@ -38,5 +49,9 @@ import servicesView from './views/servicesView.vue';
 
   section{
     padding: 110px 64px 0 64px;
+  }
+
+  a, p{
+    color: white;
   }
 </style>
